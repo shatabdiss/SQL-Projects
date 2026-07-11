@@ -34,7 +34,10 @@ Performed exploratory analysis by calculating:
 - Number of unique customers
 - Available product categories
 
-### 3. 📊 Business Questions Solved
+### 3. Business Analysis
+Answered several business questions using SQL.
+
+## 📊 Business Questions Solved
 1. Retrieve all sales made on a specific date.
 2. Find the maximum quantity sold in each category and the month when it occurred.
 3. Retrieve Clothing transactions with quantity greater than or equal to 4 during November 2022.
@@ -52,7 +55,7 @@ Performed exploratory analysis by calculating:
 15. Calculate total sales, total COGS, and gross profit for each category.
 16. Calculate the gross profit margin for each product category.
 
-### 4. 💡 SQL Concepts Demonstrated
+## 💡 SQL Concepts Demonstrated
 - Data Cleaning
 - Filtering (WHERE)
 - Sorting (ORDER BY)
@@ -68,7 +71,7 @@ Performed exploratory analysis by calculating:
 - Window Functions (ROW_NUMBER, RANK)
 - Profitability Analysis
 
-### 5. 📈 Key Findings
+## 📈 Key Findings
 Based on the analysis of the dataset, the following business insights were identified:
 - Profitability Analysis: Clothing generated the highest gross profit, while Beauty achieved the highest gross profit margin (79.71%), making it the most profitable category relative to sales.
 - Peak Sales Periods: The highest quantity sold occurred in October 2022 for Beauty, November 2022 for Clothing, and December 2023 for Electronics, revealing different peak sales months across product categories.
