@@ -90,12 +90,12 @@ SELECT
 FROM Retailsales.retail_sales
 GROUP BY category;
 
--- Q.5 Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.
+-- Q.5 Write a SQL query to find the average age of customers who purchased items from each category.
 SELECT
     category,
     ROUND(AVG(age), 2) AS avg_age
 FROM Retailsales.retail_sales
-WHERE category = 'Beauty';
+WHERE category;
 
 -- Q.6 Write a SQL query to find all transactions where the total_sale is greater than 1000.
 SELECT *
@@ -119,9 +119,9 @@ SELECT
     sale_rank
 FROM (
     SELECT
-        EXTRACT(YEAR FROM sale_date)                                                                    AS year,
-        EXTRACT(MONTH FROM sale_date)                                                                   AS month,
-        ROUND(AVG(total_sale), 2)                                                                       AS avg_sale,
+        EXTRACT(YEAR FROM sale_date) AS year,
+        EXTRACT(MONTH FROM sale_date) AS month,
+        ROUND(AVG(total_sale), 2) AS avg_sale,
         RANK() OVER (PARTITION BY EXTRACT(YEAR FROM sale_date) ORDER BY ROUND(AVG(total_sale), 2) DESC) AS sale_rank
     FROM Retailsales.retail_sales
     GROUP BY year, month) AS t1
@@ -227,11 +227,12 @@ SELECT
 FROM Retailsales.retail_sales
 GROUP BY category;
 
--- Q16. Find the category with the highest gross profit margin.
+-- Q.16 Find the category with the highest gross profit margin.
 SELECT
     category,
     ROUND(SUM(total_sale-cogs), 2) AS gross_profit,
     CONCAT(ROUND(SUM(total_sale - cogs) / SUM(total_sale) * 100 , 2),'%') AS profit_margin
 FROM Retailsales.retail_sales
 GROUP BY category;
+
 --  END OF PROJECT
